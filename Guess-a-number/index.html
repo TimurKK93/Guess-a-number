@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Игра "Угадай число"</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="container">
+
+            <header>
+                <p class="title">Игра “Угадай число” </p>
+                <a href="#main">
+                    <img title="правила" class="question" src="./Images/question.png" alt="question">
+                </a>
+
+            </header>
+
+            <p class="subtitle">Выберите уровень сложности :</p>
+
+            <div class="items-wrapper">
+
+                <a href="./index1.html">
+                    <div class="item-one">
+                        <div class="star-one">
+                            <img class="star" src="./Images/star.png" alt="star">
+                        </div>
+                        <p class="text-one">числа от 1 до 10 , за 3 попытки</p>
+                    </div>
+                </a>
+
+                <a href="./index2.html">
+                    <div class="item-two">
+                        <div class="star-two">
+                            <img class="star" src="./Images/star.png" alt="star">
+                            <img class="star" src="./Images/star.png" alt="star">
+                        </div>
+                        <p class="text-two">числа от 1 до 100 , за 7 попыток</p>
+                    </div>
+                </a>
+
+                <a href="./index3.html">
+                    <div class="item-three">
+                        <div class="star-three">
+                            <img class="star" src="./Images/star.png" alt="star">
+                            <img class="star" src="./Images/star.png" alt="star">
+                            <img class="star" src="./Images/star.png" alt="star">
+                        </div>
+                        <p class="text-three">числа от 1 до 1000 , за 10 попыток</p>
+                    </div>
+                </a>
+            </div>
+            <a href="#" id="main">
+                <div id="okno">
+                    <h4>Правила игры.</h4>
+                    <br> Компьютер загадывет случайное число, ваша задача отгадать его использовав как
+                    можно меньше попыток. При каждой попытке будет даваться один из трех ответов:
+                    "больше", "меньше", "угадал".
+                </div>
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>

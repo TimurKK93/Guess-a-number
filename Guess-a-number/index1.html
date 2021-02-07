@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Игра "Угадай число"</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="back">
+                <a href="./index.html">
+                    <img src="./Images/back.png" alt="назад">
+                </a>
+            </div>
+            <div class="item-wrapper">
+                <div class="item-lvl-one">
+                    <div class="star-one">
+                        <a href="">
+                            <img class="star" src="./Images/star.png" alt="star">
+                        </a>
+                    </div>
+                    <p class="text-one">числа от 1 до 10</p>
+                </div>
+            </div>
+
+
+            <div class="counter">
+                <p class="count-txt">оталось попыток :</p>
+                <p class="count" id="count"></p>
+            </div>
+
+            <div class="result">
+                <p id="result"></p>
+            </div>
+
+            <div class="output">
+                <input type="text" class="output-inp" name="" id="output" placeholder="введите число"
+                    autocomplete="off">
+            </div>
+
+            <div class="btn">
+                <input type="button" class="btn-num" value="ОК" id="btn-num">
+                <input type="button" class="res-img" id="btn-res" value="ЗАНОВО">
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
