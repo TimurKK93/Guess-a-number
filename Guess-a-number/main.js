@@ -1,46 +1,59 @@
-const random = Math.floor(Math.random() * 10) + 1
+const guessNumber = {
 
-const count = document.getElementById('count')
-const result = document.getElementById('result')
-const btnNum = document.getElementById('btn-num')
-const btnRes = document.getElementById('btn-res')
-const output = document.getElementById('output')
+    count: document.getElementById('count'),
+    result: document.getElementById('result'),
+    btnNum: document.getElementById('btn-num'),
+    btnRes: document.getElementById('btn-res'),
+    output: document.getElementById('output'),
 
-btnNum.addEventListener('click', btn)
-btnRes.addEventListener('click', btnR)
+    counts(c) {
+        this.count.innerHTML = c
+        return this.counter = this.count.innerHTML
+    },
 
-count.innerHTML = 3
+    launch(num) {
+        const that = this
+        this.btnNum.addEventListener('click', function () {
+            that.btn()
+        })
+        this.btnRes.addEventListener('click', function () {
+            that.btnR()
+        })
+        return this.numberRandom = Math.floor(Math.random() * num) + 1
+    },
 
-function btn() {
-    if (output.value == random) {
-        result.innerHTML = 'Поздравляю, вы угадали число ' + random
-        output.value = ''
-        count.innerHTML--
-        output.disabled = true
+    btn() {
+        if (this.output.value == this.numberRandom) {
+            this.result.innerHTML = 'Поздравляю, вы угадали число ' + this.numberRandom
+            this.output.value = ''
+            this.count.innerHTML--
+            this.output.disabled = true
 
-    } else if (output.value == '') {
+        } else if (this.output.value == '') {
 
-    } else if (count.innerHTML == 1) {
-        result.innerHTML = 'Вы не угадали, это число ' + random
-        count.innerHTML--
-        output.value = ''
-        output.disabled = true
+        } else if (this.count.innerHTML == 1) {
+            this.result.innerHTML = 'Вы не угадали, это число ' + this.numberRandom
+            this.count.innerHTML--
+            this.output.value = ''
+            this.output.disabled = true
 
-    } else if (output.value > random) {
-        result.innerHTML = 'меньше'
-        output.value = ''
-        count.innerHTML--
+        } else if (this.output.value > this.numberRandom) {
+            this.result.innerHTML = 'меньше'
+            this.output.value = ''
+            this.count.innerHTML--
 
-    } else if (output.value < random) {
-        result.innerHTML = 'больше'
-        output.value = ''
-        count.innerHTML--
+        } else if (this.output.value < this.numberRandom) {
+            this.result.innerHTML = 'больше'
+            this.output.value = ''
+            this.count.innerHTML--
+        }
+    },
+
+    btnR() {
+        // this.count.innerHTML = this.counter
+        // this.output.value = ''
+        // this.output.disabled = false
+        // this.result.innerHTML = ''
+        window.location.reload()
     }
-}
-
-function btnR() {
-    count.innerHTML = 3
-    output.value = ''
-    output.disabled = false
-    result.innerHTML = ''
 }
